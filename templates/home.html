@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+<form action="{{ url_for('home') }}" method="post">
+
+	{{ form.csrf_token }}
+
+	{{ form.username.label }}
+
+	{{ form.username }} <br><br>
+
+	{{ form.password.label }}
+
+	{{ form.password }}<br><br>
+
+	{{ form.recaptcha }}<br>
+
+	<input type = "submit" value="Submit"> 
+
+</form>
+</body>
+</html>
